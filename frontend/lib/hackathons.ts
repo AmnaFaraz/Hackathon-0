@@ -17,7 +17,7 @@ export const hackathons: Hackathon[] = [
     tech: ["Next.js 15", "Supabase", "Vercel"],
     description: "Central hub linking all Panaversity hackathon projects.",
     status: "live",
-    url: "#",
+    url: "https://panaversity-hackathon-0.vercel.app",
     points: "1000 + 500 bonus",
   },
   {
@@ -25,8 +25,8 @@ export const hackathons: Hackathon[] = [
     title: "Physical AI & Robotics Textbook",
     tech: ["Docusaurus", "FastAPI", "Groq", "Supabase pgvector"],
     description: "AI-native textbook + embedded RAG chatbot.",
-    status: "coming-soon",
-    url: "#",
+    status: "live",
+    url: "https://panaversity-hackathon-1.vercel.app",
     points: "100 + 200 bonus",
   },
   {
@@ -34,8 +34,8 @@ export const hackathons: Hackathon[] = [
     title: "Evolution of Todo",
     tech: ["Next.js 15", "FastAPI", "Supabase", "Kafka", "Kubernetes"],
     description: "5-phase: console → full-stack → AI chatbot → K8s → cloud.",
-    status: "coming-soon",
-    url: "#",
+    status: "live",
+    url: "https://panaversity-hackathon-2.vercel.app",
     points: "1000 + 600 bonus",
   },
   {
@@ -43,8 +43,8 @@ export const hackathons: Hackathon[] = [
     title: "Reusable Intelligence + LearnFlow",
     tech: ["Agent Skills", "MCP", "Kubernetes", "Dapr"],
     description: "Skills library + AI Python tutoring platform.",
-    status: "coming-soon",
-    url: "#",
+    status: "live",
+    url: "https://panaversity-learnflow.vercel.app",
     points: "1000 + 400 bonus",
   },
   {
@@ -52,8 +52,8 @@ export const hackathons: Hackathon[] = [
     title: "Course Companion FTE",
     tech: ["Next.js 15", "Groq", "FastAPI", "Supabase"],
     description: "24/7 AI tutor — Zero-Backend-LLM → Hybrid.",
-    status: "coming-soon",
-    url: "#",
+    status: "live",
+    url: "https://panaversity-course-companion.vercel.app",
     points: "1000 + 500 bonus",
   },
 ];
