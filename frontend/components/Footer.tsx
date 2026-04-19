@@ -42,7 +42,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-xs text-[#8B949E] font-mono">
-            © {new Date().getFullYear()} Amna Faraz
+            © 2024 Amna Faraz
           </p>
         </div>
       </div>
