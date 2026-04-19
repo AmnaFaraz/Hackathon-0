@@ -4,9 +4,10 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Sun, Moon, GitBranch, Code2 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
@@ -59,15 +60,42 @@ export function Navbar() {
         {/* Theme toggle */}
         {mounted && (
           <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-            className="ml-4 p-2 rounded-lg border border-border text-secondary hover:text-foreground hover:border-brand/30 transition-all duration-200"
+            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+            className={`
+              ml-4 p-2 rounded-xl border-2 transition-all duration-300
+              flex items-center justify-center relative w-10 h-10
+              ${resolvedTheme === "dark" 
+                ? "bg-amber-400/10 border-amber-500/50 text-amber-500 shadow-[0_0_15px_rgba(251,191,36,0.1)]" 
+                : "bg-slate-900 border-indigo-500/50 text-indigo-400 shadow-[0_0_15px_rgba(99,102,241,0.1)]"
+              }
+              hover:scale-110 active:scale-95 group/theme
+            `}
+            aria-label={`Switch to ${resolvedTheme === "dark" ? "light" : "dark"} mode`}
           >
-            {theme === "dark" ? (
-              <Sun className="w-4 h-4" aria-hidden="true" />
-            ) : (
-              <Moon className="w-4 h-4" aria-hidden="true" />
-            )}
+            <div className="absolute inset-0 bg-current opacity-0 group-hover/theme:opacity-5 transition-opacity rounded-lg" />
+            <AnimatePresence mode="wait" initial={false}>
+              {resolvedTheme === "dark" ? (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                >
+                  <Sun className="w-5 h-5" aria-hidden="true" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: 90, opacity: 0, scale: 0.5 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: -90, opacity: 0, scale: 0.5 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                >
+                  <Moon className="w-5 h-5" aria-hidden="true" />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </button>
         )}
       </nav>
