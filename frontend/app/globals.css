@@ -5,6 +5,18 @@ html {
 }
 
 :root {
+  --bg-primary: #FFFFFF;
+  --bg-surface: #F6F8FA;
+  --border-color: #D0D7DE;
+  --accent-cyan: #0969DA;
+  --accent-purple: #8250DF;
+  --text-primary: #1F2328;
+  --text-secondary: #656D76;
+  --success-green: #1A7F37;
+  --warning-orange: #9A6700;
+}
+
+.dark {
   --bg-primary: #080B14;
   --bg-surface: #0D1117;
   --border-color: #21262D;
@@ -19,10 +31,17 @@ html {
 @theme inline {
   --color-background: var(--bg-primary);
   --color-foreground: var(--text-primary);
+  --color-surface: var(--bg-surface);
+  --color-brand: var(--accent-cyan);
+  --color-brand-purple: var(--accent-purple);
+  --color-border: var(--border-color);
+  --color-secondary: var(--text-secondary);
+  --color-success: var(--success-green);
+  --color-warning: var(--warning-orange);
 }
 
 body {
-  background: var(--bg-primary);
+  background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: Inter, system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,13 +54,13 @@ a, button, input, textarea, select {
 
 /* Hero gradient */
 .hero-gradient {
-  background: radial-gradient(ellipse at top left, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
-              radial-gradient(ellipse at bottom right, rgba(124, 58, 237, 0.06) 0%, transparent 50%),
-              #080B14;
+  background: radial-gradient(ellipse at top left, color-mix(in srgb, var(--accent-cyan), transparent 92%) 0%, transparent 50%),
+              radial-gradient(ellipse at bottom right, color-mix(in srgb, var(--accent-purple), transparent 94%) 0%, transparent 50%),
+              var(--bg-primary);
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #080B14; }
-::-webkit-scrollbar-thumb { background: #21262D; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #484F58; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
