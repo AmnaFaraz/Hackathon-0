@@ -41,9 +41,9 @@ export function Hero() {
         </div>
 
         {/* Name */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#E6EDF3] mb-6 leading-tight tracking-tight">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-6 leading-tight tracking-tight">
           Amna{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#7C3AED]">
+          <span className="text-[#00D4FF]">
             Faraz
           </span>
         </h1>
@@ -51,9 +51,9 @@ export function Hero() {
         {/* Subtitle */}
         <p className="text-lg sm:text-xl text-[#8B949E] mb-4 max-w-2xl mx-auto leading-relaxed">
           Building{" "}
-          <span className="text-[#E6EDF3] font-medium">Digital FTEs</span>
+          <span className="text-[#FFFFFF] font-medium">Digital FTEs</span>
         </p>
-        <p className="text-sm font-mono text-[#484F58] mb-12 tracking-wider">
+        <p className="text-sm font-mono text-[#8B949E] mb-12 tracking-wider">
           168h/week &nbsp;·&nbsp; Zero fatigue &nbsp;·&nbsp; Always on
         </p>
 
@@ -61,7 +61,7 @@ export function Hero() {
         <a
           href="#hackathons"
           aria-label="Scroll to hackathon projects"
-          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#00D4FF] text-[#080B14] font-semibold text-sm hover:bg-[#00D4FF]/90 transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,212,255,0.3)]"
+          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#00D4FF] text-[#080B14] font-bold text-sm hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-200"
         >
           View Projects
           <ChevronDown className="w-4 h-4" aria-hidden="true" />

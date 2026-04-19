@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { BackToTop } from "@/components/BackToTop";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   description:
     "Building Digital FTEs — 168h/week. Zero fatigue. Panaversity Hackathon Portfolio by Amna Faraz.",
   keywords: ["AI", "Panaversity", "hackathon", "Next.js", "Groq", "Supabase"],
+  authors: [{ name: "Amna Faraz" }],
   openGraph: {
     title: "Amna Faraz — Panaversity AI Agent Architect",
     description: "Building Digital FTEs — 168h/week. Zero fatigue.",
@@ -33,6 +35,7 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>

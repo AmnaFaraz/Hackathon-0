@@ -11,7 +11,7 @@ export function HackathonCard({ hackathon }: HackathonCardProps) {
   const isLive = hackathon.status === "live";
 
   return (
-    <div className="group relative flex flex-col bg-[#0D1117] border border-[#21262D] rounded-2xl p-6 transition-all duration-200 hover:border-[#00D4FF]/40 hover:bg-[#0D1117]/80 hover:shadow-[0_0_30px_rgba(0,212,255,0.06)]">
+    <div className="group relative flex flex-col bg-[#0D1117] border border-[#21262D] rounded-xl p-6 transition-all duration-300 hover:border-[#00D4FF] hover:bg-[#0D1117] hover:shadow-[0_0_30px_rgba(0,212,255,0.15)]">
       {/* Top row */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-2">
@@ -23,7 +23,7 @@ export function HackathonCard({ hackathon }: HackathonCardProps) {
       </div>
 
       {/* Title */}
-      <h3 className="text-lg font-semibold text-[#E6EDF3] mb-2 leading-tight group-hover:text-[#00D4FF] transition-colors duration-200">
+      <h3 className="text-lg font-semibold text-[#FFFFFF] mb-2 leading-tight group-hover:text-[#00D4FF] transition-colors duration-200">
         {hackathon.title}
       </h3>
 
@@ -46,7 +46,7 @@ export function HackathonCard({ hackathon }: HackathonCardProps) {
 
       {/* Points + Link */}
       <div className="flex items-center justify-between pt-4 border-t border-[#21262D]">
-        <div className="flex items-center gap-1.5 text-xs text-[#F59E0B]">
+        <div className="flex items-center gap-1.5 text-xs text-[#D29922]">
           <Zap className="w-3.5 h-3.5" aria-hidden="true" />
           <span className="font-mono font-medium">{hackathon.points} pts</span>
         </div>
@@ -57,9 +57,9 @@ export function HackathonCard({ hackathon }: HackathonCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${hackathon.title} (opens in new tab)`}
-            className="inline-flex items-center gap-1.5 text-xs font-medium text-[#00D4FF] hover:text-white transition-colors duration-200"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#00D4FF] text-[#080B14] text-xs font-bold hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-200"
           >
-            View Live <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+            View Project <ExternalLink className="w-3 h-3" aria-hidden="true" />
           </a>
         ) : (
           <Link

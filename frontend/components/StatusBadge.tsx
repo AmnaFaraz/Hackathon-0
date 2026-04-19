@@ -7,10 +7,10 @@ interface StatusBadgeProps {
 export function StatusBadge({ status }: StatusBadgeProps) {
   if (status === "live") {
     return (
-      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-[#00FF88]/10 text-[#00FF88] border border-[#00FF88]/30">
+      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-[#3FB950]/10 text-[#3FB950] border border-[#3FB950]/30">
         <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00FF88] opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00FF88]"></span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3FB950] opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3FB950]"></span>
         </span>
         LIVE
       </span>
